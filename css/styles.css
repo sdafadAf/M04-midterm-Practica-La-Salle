@@ -1,4 +1,3 @@
-/* 1. Importación de Fuentes de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 /* 2. Reset Básico y Estilos Globales */
@@ -102,7 +101,6 @@ a:hover {
 .logo-header {
     height: 50px; /* Tamaño del logo en el header */
     width: auto;
-    vertical-align: middle; /* Para alinearlo con el texto si está al lado */
 }
 
 header {
@@ -124,11 +122,11 @@ header h1 {
 
 nav ul {
     list-style: none;
-    /* Flexbox para los elementos de la lista  */
+    /* Flexbox para los elementos de la lista 	*/
     display: flex; 
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     justify-content: center;
-    gap: 15px; /* Separación mínima entre elementos  */
+    gap: 15px; /* Separación mínima entre elementos 	*/
 }
 
 nav a {
@@ -241,10 +239,6 @@ section {
     z-index: 1;
 }
 
-#banner-trastornos article, #banner-recursos article {
-    position: relative;
-    z-index: 2;
-}
 
 #banner-trastornos h2, #banner-recursos h2 {
     color: white;
