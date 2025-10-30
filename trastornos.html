@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trastornos Comunes - Mente Clara</title>
+    <title>Busca Ayuda - Mente Clara</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Mente Clara</h1>
+        <div class="logo-title-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo de Mente Clara: Conciencia y Bienestar" class="logo-header">
+            </a>
+            <h1>Mente Clara</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -20,58 +25,48 @@
         </nav>
     </header>
 
-    <section id="banner-trastornos">
-        <article>
-            <h2>Entendiendo los Trastornos Mentales</h2>
-            <p>Información detallada sobre las condiciones de salud mental más frecuentes.</p>
+    <section id="banner-recursos">
+        <h2>No Estás Solo: Recursos y Apoyo</h2>
+        <p>Encuentra la ayuda que necesitas para cuidar tu salud mental.</p>
+    </section>
+
+    <section id="tipos-ayuda">
+        <h3>Tipos de Profesionales y Terapias</h3>
+        <article class="recurso-item">
+            <h4>Psicólogos</h4>
+            <p>Se especializan en psicoterapia, ayudando a las personas a gestionar sus emociones, pensamientos y comportamientos a través de técnicas de conversación y estrategias cognitivo-conductuales.</p>
+        </article>
+        <article class="recurso-item">
+            <h4>Psiquiatras</h4>
+            <p>Son médicos que pueden diagnosticar y tratar enfermedades mentales, incluyendo la prescripción de medicamentos. A menudo combinan la medicación con la terapia.</p>
+        </article>
+        <article class="recurso-item">
+            <h4>Terapeutas (consejeros)</h4>
+            <p>Ofrecen apoyo y guía para superar desafíos personales, emocionales o relacionales. Pueden tener diversas especialidades y enfoques.</p>
         </article>
     </section>
 
-    <section id="lista-trastornos">
-        <h3>Depresión</h3>
-        <article class="info-trastorno">
-            <h4>¿Qué es la Depresión?</h4>
-            <p>La depresión es un trastorno del estado de ánimo que se caracteriza por sentimientos persistentes de tristeza y una pérdida de interés en las actividades que antes disfrutabas. Puede afectar el pensamiento, el comportamiento, los sentimientos y el bienestar físico.</p>
-            <figure>
-                <img src="images/depresion.jpg" alt="Persona con expresión de tristeza o melancolía">
-                <figcaption>La depresión va más allá de la tristeza.</figcaption>
-            </figure>
-            <h4>Síntomas Comunes:</h4>
-            <ul>
-                <li>Estado de ánimo deprimido la mayor parte del día.</li>
-                <li>Pérdida de interés o placer en casi todas las actividades.</li>
-                <li>Cambios en el apetito o el peso.</li>
-                <li>Problemas de sueño (insomnio o hipersomnia).</li>
-                <li>Fatiga o pérdida de energía.</li>
-                <li>Sentimientos de inutilidad o culpa excesiva.</li>
-                <li>Dificultad para concentrarse o tomar decisiones.</li>
-                <li>Pensamientos recurrentes de muerte o suicidio.</li>
+    <section id="organizaciones-apoyo">
+        <h3>Organizaciones y Líneas de Ayuda</h3>
+        <ul>
+            <li>
+                <h4><a href="https://www.who.int/es/health-topics/mental-health" target="_blank">Organización Mundial de la Salud (OMS)</a></h4>
+                <p>Información global y recursos sobre salud mental.</p>
+            </li>
+            <li>
+                <h4><a href="https://www.nimh.nih.gov/health/find-help/index.shtml" target="_blank">National Institute of Mental Health (NIMH)</a></h4>
+                <p>Investigación y recursos en inglés, con secciones sobre cómo encontrar ayuda.</p>
+            </li>
+            <li>
+                <h4>Línea de Ayuda Nacional para la Prevención del Suicidio</h4>
+                <p>Número de teléfono: 024 </p>
+                <p>Ofrece apoyo confidencial y gratuito 24/7.</p>
+            </li>
             </ul>
-            <a href="recursos.html" class="btn-primary">Busca Ayuda para la Depresión</a>
-        </article>
-
-        <h3>Ansiedad</h3>
-        <article class="info-trastorno">
-            <h4>¿Qué es la Ansiedad?</h4>
-            <p>La ansiedad es una emoción normal que todos experimentamos en momentos de estrés. Sin embargo, cuando los sentimientos de ansiedad son extremos, duran más de seis meses y son lo suficientemente graves como para interferir con tu vida, podría ser un trastorno de ansiedad.</p>
-            <figure>
-                <img src="images/ansiedad.jpg" alt="Persona mostrando signos de preocupación o estrés">
-                <figcaption>La ansiedad puede manifestarse de muchas formas.</figcaption>
-            </figure>
-            <h4>Síntomas Comunes:</h4>
-            <ul>
-                <li>Nerviosismo, inquietud o sensación de estar al límite.</li>
-                <li>Sensación de peligro, pánico o temor inminente.</li>
-                <li>Aumento del ritmo cardíaco.</li>
-                <li>Respiración acelerada (hiperventilación).</li>
-                <li>Sudoración.</li>
-                <li>Temblores o sacudidas.</li>
-                <li>Dificultad para concentrarse.</li>
-            </ul>
-            <a href="recursos.html" class="btn-primary">Busca Ayuda para la Ansiedad</a>
-        </article>
-
-        </section>
+        <aside>
+            <p><strong>Recuerda:</strong> Si estás experimentando una crisis, busca ayuda profesional de inmediato. Los números de emergencia varían según tu ubicación.</p>
+        </aside>
+    </section>
 
     <footer id="contacto">
         <p>Contacto: practicas@lasalle.com</p>
