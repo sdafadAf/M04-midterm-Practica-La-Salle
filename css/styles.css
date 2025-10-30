@@ -1,0 +1,455 @@
+/* 1. Importación de Fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* 2. Reset Básico y Estilos Globales */
+* {
+    /* Asegura que padding y border se incluyan en el tamaño total del elemento */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*Tipografía secundaria, tamaño base y color de texto primario */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem; /* Aproximadamente 17.6px, cumpliendo el mínimo de 16px */
+    line-height: 1.6;
+    color: #212121;
+    background-color: #f4f4f4; /* Un fondo suave para todo el cuerpo */
+    /*Borde de la página de 16px en los laterales */
+    padding-left: 16px; 
+    padding-right: 16px;
+}
+
+/* 3. Estilos de Tipografía (Oswald para títulos) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    color: #3F51B5; /* Indigo para títulos */
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+
+h1 {
+    font-size: 2.8rem; /* 44.8px, cercano a 48px */
+    text-align: center;
+    color: white; /* Para el h1 dentro del header */
+}
+
+h2 {
+    font-size: 2.2rem; /* 35.2px, cercano a 36px */
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.8rem; /* 28.8px, cercano a 28px */
+    color: #303F9F; /* Dark Indigo para sub-títulos importantes */
+}
+
+h4 {
+    font-size: 1.4rem;
+    color: #689F38; /* Dark Light Green para énfasis */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #3F51B5; /* Color primario para enlaces */
+    text-decoration: none;
+    /* Uso de transiciones para una mejor experiencia de usuario */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+    color: #689F38; /* Dark Light Green al pasar el ratón */
+}
+
+/* 4. Estilos de Botones */
+.btn-primary {
+    display: inline-block;
+    background-color: #8BC34A; /* Light Green */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-align: center;
+    /*Tamaño mínimo adecuado para dispositivos táctiles */
+    min-width: 48px;
+    min-height: 48px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    margin-top: 1em;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #689F38; /* Dark Light Green */
+    transform: translateY(-2px); /* Pequeña animación al pasar el ratón */
+    outline: none; /* Elimina el contorno de enfoque por defecto */
+}
+
+/* 5. Header y Navegación */
+
+.logo-title-container {
+    display: flex; /* Alinea los elementos de forma horizontal */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 10px; /* Espacio entre el logo y el H1 */
+}
+
+.logo-header {
+    height: 50px; /* Tamaño del logo en el header */
+    width: auto;
+    vertical-align: middle; /* Para alinearlo con el texto si está al lado */
+}
+
+header {
+    background-color: #3F51B5; /* Indigo */
+    color: white;
+    padding: 1em 0;
+    /* Uso de Flexbox para alinear elementos en el header */
+    display: flex; 
+    flex-direction: column; /* Por defecto en mobile, apilado */
+    align-items: center;
+    gap: 10px; /* Separación entre h1 y nav */
+    border-bottom: 4px solid #303F9F; /* Dark Indigo */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Ajuste para que el h1 de la cabecera no sea tan grande */
+}
+
+nav ul {
+    list-style: none;
+    /* Flexbox para los elementos de la lista  */
+    display: flex; 
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: center;
+    gap: 15px; /* Separación mínima entre elementos  */
+}
+
+nav a {
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    /* Uso de pseudo-clases para feedback visual */
+    transition: background-color 0.3s ease; 
+}
+
+nav a:hover, nav a:focus {
+    background-color: #536dfe; /* Un tono más claro de Indigo */
+}
+
+/* 6. Contenedor principal de secciones */
+main { 
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 7. Sección de Bienvenida/Hero (index.html) */
+#bienvenida {
+    
+    background: linear-gradient(to right, #e8f5e9, #c8e6c9); /* Light Green a Light Green Claro */
+    text-align: center;
+    padding: 50px 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#bienvenida h2 {
+    color: #303F9F;
+    font-size: 2.5rem;
+}
+
+#bienvenida p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+#bienvenida figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#bienvenida figure figcaption {
+    font-size: 0.9em;
+    color: #757575;
+    margin-top: 10px;
+}
+
+/* 8. Sección de Trastornos Resumen (index.html) */
+#trastornos-resumen {
+    text-align: center;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas adaptables */
+    gap: 20px;
+}
+
+#trastornos-resumen aside {
+    background-color: #DCEDC8; /* Light Light Green */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#trastornos-resumen aside h3 {
+    color: #689F38; /* Dark Light Green */
+    margin-top: 0;
+}
+
+/* 9. Secciones de Contenido Común (trastornos.html, recursos.html) */
+#banner-trastornos, #banner-recursos {
+    
+    background-image: url('../images/banner-salud-mental.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* Para que el pseudo-elemento no se desborde */
+}
+
+#banner-trastornos::before, #banner-recursos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente */
+    z-index: 1;
+}
+
+#banner-trastornos article, #banner-recursos article {
+    position: relative;
+    z-index: 2;
+}
+
+#banner-trastornos h2, #banner-recursos h2 {
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#banner-trastornos p, #banner-recursos p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Estilos específicos para trastornos.html */
+.info-trastorno {
+    padding: 25px;
+    border: 1px solid #C5CAE9; /* Light Indigo */
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+.info-trastorno h4 {
+    margin-top: 0;
+    color: #303F9F;
+}
+
+.info-trastorno ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+.info-trastorno ul li {
+    margin-bottom: 0.5em;
+    color: #757575;
+}
+
+.info-trastorno figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos para recursos.html */
+.recurso-item {
+    padding: 20px;
+    border: 1px solid #DCEDC8; /* Light Light Green */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+#organizaciones-apoyo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#organizaciones-apoyo ul li {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #8BC34A; /* Light Green */
+    border-radius: 5px;
+}
+#organizaciones-apoyo ul li h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#organizaciones-apoyo aside {
+    background-color: #C5CAE9; /* Light Indigo */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: #303F9F;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* 10. Footer */
+footer {
+    background-color: #303F9F; /* Dark Indigo */
+    color: #C5CAE9; /* Light Indigo para el texto */
+    text-align: center;
+    padding: 25px 16px;
+    margin-top: 30px;
+    border-top: 4px solid #3F51B5; /* Indigo */
+}
+
+footer p {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+
+/* Estilos para iconos de redes sociales */
+.social-icons a {
+    color: #C5CAE9;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+.social-icons a:hover {
+    color: white;
+}
+
+/* 11. Diseño Responsive - Media Queries */
+
+/* Desktop/Tablet (Pantallas más grandes que 768px) */
+@media (min-width: 769px) {
+    header {
+        flex-direction: row; /* Vuelve a ser fila en desktop */
+        justify-content: space-between;
+        padding: 1em 30px; /* Más padding en los laterales */
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    #bienvenida {
+        flex-direction: row; /* Hero en fila */
+        text-align: left;
+        padding: 80px 50px;
+        gap: 50px;
+    }
+
+    #bienvenida article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #bienvenida figure {
+        flex: 1;
+    }
+
+    #trastornos-resumen {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para los aside */
+    }
+
+    #lista-trastornos, #tipos-ayuda, #organizaciones-apoyo {
+        max-width: 900px; /* Limita el ancho del contenido principal */
+        margin: 20px auto;
+        padding: 0; /* Padding ya lo tiene la sección */
+    }
+}
+
+/* Mobile (Pantallas de hasta 768px) */
+@media (max-width: 768px) {
+    body {
+        padding-left: 8px; /* Reducir el padding lateral en móvil */
+        padding-right: 8px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Apilar elementos del menú */
+        gap: 8px;
+        margin-top: 10px;
+    }
+    nav a {
+        padding: 10px 0;
+        width: 100%; /* Botones de navegación ocupan todo el ancho */
+        text-align: center;
+    }
+
+    #bienvenida {
+        padding: 30px 15px;
+    }
+
+    #bienvenida h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        width: 100%; /* Botones a ancho completo en móvil */
+        max-width: 300px; /* Limitar el ancho máximo para que no sea demasiado grande */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #trastornos-resumen {
+        grid-template-columns: 1fr; /* Una sola columna para los aside */
+    }
+
+    #banner-trastornos h2, #banner-recursos h2 {
+        font-size: 2rem;
+    }
+    #banner-trastornos p, #banner-recursos p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 20px 8px;
+    }
+}
